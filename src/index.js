@@ -27,7 +27,7 @@ const store = createStore(rootReducer, enhancers);
 
 const app = (
   <Provider store={store}>
-    <BrowserRouter>
+    <BrowserRouter basename="/random-quotes">
       <App />
     </BrowserRouter>
   </Provider>
