@@ -1,0 +1,19 @@
+.Modal {
+  width: 100vw;
+  height: 100vh;
+  z-index: 400;
+  position: relative;
+  background-color: white;
+}
+
+@media (min-width: 769px) {
+  .Modal {
+    width: 50%;
+    height: 80%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+}

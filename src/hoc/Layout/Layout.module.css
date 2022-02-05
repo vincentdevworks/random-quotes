@@ -1,0 +1,15 @@
+.Auth {
+  position: fixed;
+  right: 10px;
+  top: 10px;
+  z-index: 50;
+}
+
+.NavigationContainer {
+  position: fixed;
+  top: 0;
+  height: 56px;
+  width: 100%;
+  background-color: #b2dbd5;
+  z-index: 40;
+}

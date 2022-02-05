@@ -1,0 +1,56 @@
+.FavCard {
+  width: 90%;
+  height: 130px;
+  background-color: white;
+  margin: 7px 0px;
+  box-shadow: rgba(255, 255, 255, 0.2) 0px 0px 0px 1px inset,
+    rgba(0, 0, 0, 0.9) 0px 0px 0px 1px;
+  position: relative;
+}
+
+.FavCard span:first-child {
+  position: absolute;
+  top: 0px;
+  right: 5px;
+  cursor: pointer;
+}
+
+.FavCard p {
+  position: absolute;
+  width: 85%;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.FavCard span:nth-child(3) {
+  position: absolute;
+  bottom: 25px;
+  right: 10px;
+  font-size: 12px;
+}
+
+.FavCard span:nth-child(4) {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  font-size: 10px;
+}
+
+@media (min-width: 768px) {
+  .FavCard {
+    width: 48%;
+    height: 150px;
+    margin: 7px 5px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .FavCard {
+    width: 31%;
+    margin: 7px 5px;
+  }
+}

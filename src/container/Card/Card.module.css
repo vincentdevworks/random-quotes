@@ -1,0 +1,84 @@
+.Card {
+  height: 250px;
+  width: 80%;
+  background-color: #ffffff;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+    rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+  padding: 10px 15px;
+}
+
+.Card div button:first-child {
+  position: absolute;
+  bottom: 30px;
+  left: 15px;
+}
+
+.Card div button:last-child {
+  position: absolute;
+  bottom: 30px;
+  right: 15px;
+}
+
+.Card .Div span {
+  position: absolute;
+  right: 10px;
+  bottom: 20px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.Card .Div p {
+  text-align: center;
+  font-size: 16px;
+  position: absolute;
+  top: 20px;
+  margin: 0px;
+  font-style: italic;
+  width: 100%;
+}
+
+.Card .Div {
+  position: relative;
+  height: 80%;
+}
+
+.Card .Position {
+  position: absolute;
+  bottom: 10px;
+  left: 15px;
+  min-width: 80px;
+  min-height: 40px;
+  text-align: center;
+}
+
+@media (min-width: 601px) {
+  .Card {
+    width: 520px;
+    height: 250px;
+    padding: 15px 20px;
+  }
+  .Card .Div span {
+    font-size: 15px;
+    bottom: 0;
+  }
+  .Card .Div p {
+    font-size: 18px;
+  }
+  .Card .Div {
+    height: 70%;
+    text-align: center;
+  }
+  .Card div button:first-child {
+    left: 20px;
+  }
+  .Card div button:last-child {
+    right: 20px;
+  }
+  .Card .Position {
+    min-width: 150px;
+  }
+}

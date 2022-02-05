@@ -1,0 +1,35 @@
+.Favorites {
+  width: 100%;
+  margin-top: 60px;
+  height: 100%;
+}
+
+.Favorites h1 {
+  display: none;
+}
+
+.Container {
+  height: 100%;
+  width: 90%;
+  margin: 0px auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.Center {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+@media (min-width: 601px) {
+  .Container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+  }
+}

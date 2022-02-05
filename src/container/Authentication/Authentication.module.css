@@ -1,0 +1,75 @@
+.Authentication {
+  width: 90%;
+  position: relative;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.Spinner {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.Authentication form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.Authentication .Container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  text-align: center;
+}
+
+.Authentication .Container > div {
+  width: 40%;
+}
+
+.Authentication .Container div {
+  background-color: black;
+  height: 2px;
+}
+
+.Close {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 20px;
+  font-weight: lighter;
+  cursor: pointer;
+}
+
+.Authentication p {
+  font-size: 13px;
+  margin: 0px;
+}
+
+.Authentication form > * {
+  margin-bottom: 15px;
+}
+
+.Icon {
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.Icons {
+  width: 50%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.Authentication span a {
+  color: rgb(27, 27, 189);
+  text-decoration: underline;
+  cursor: pointer;
+}

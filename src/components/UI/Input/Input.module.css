@@ -1,0 +1,36 @@
+.Bold {
+  font-weight: bold;
+}
+
+.Pointer:hover {
+  cursor: pointer;
+}
+
+.AuthInput {
+  padding: 10px;
+  font-size: 15px;
+  border: 2px solid rgb(138, 138, 138);
+  border-radius: 2px;
+  min-width: 200px;
+}
+
+.Valid {
+  border: 2px solid rgb(26, 213, 26);
+}
+
+.Invalid {
+  border: 2px solid rgb(245, 11, 11);
+}
+
+.AuthInput:focus {
+  border: 2px solid black;
+  outline: none !important;
+}
+
+.Valid:focus {
+  border: 2px solid rgb(26, 213, 26);
+}
+
+.Invalid:focus {
+  border: 2px solid rgb(245, 11, 11);
+}

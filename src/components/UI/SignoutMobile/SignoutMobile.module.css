@@ -1,0 +1,15 @@
+.Signout {
+  position: fixed;
+  right: 10px;
+  top: 15px;
+  text-decoration: none;
+  color: rgb(167, 18, 18);
+  font-weight: bold;
+  z-index: 50;
+}
+
+@media (min-width: 601px) {
+  .Signout {
+    display: none;
+  }
+}

@@ -1,0 +1,29 @@
+.Filter {
+  position: absolute;
+  width: 100%;
+  left: 50%;
+  top: -20%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+  border: 2px solid #ffffff;
+}
+
+.Filter > div {
+  width: 50%;
+}
+
+@media (min-width: 601px) {
+  .Filter {
+    flex-wrap: nowrap;
+    flex-direction: row;
+    top: -15%;
+    width: 100%;
+    text-align: center;
+  }
+  .Filter > div {
+    width: 25%;
+  }
+}

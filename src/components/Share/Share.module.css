@@ -1,0 +1,19 @@
+.Share {
+  position: absolute;
+  bottom: 15%;
+  width: 200px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.Size {
+  font-size: 30px;
+}
+
+@media (min-width: 601px) {
+  .Size {
+    font-size: 40px;
+  }
+}

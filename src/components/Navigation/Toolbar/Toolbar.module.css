@@ -1,0 +1,21 @@
+.Toolbar {
+  height: 56px;
+  padding: 0px 10px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 50;
+  box-sizing: border-box;
+}
+.Toolbar .Desktop {
+  display: none;
+}
+
+@media (min-width: 601px) {
+  .Toolbar {
+    width: 100%;
+  }
+  .Toolbar .Desktop {
+    display: initial;
+  }
+}
