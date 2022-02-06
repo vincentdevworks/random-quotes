@@ -1,21 +1,25 @@
 {
   "files": {
-    "main.css": "/random-quotes/static/css/main.134ecf8e.css",
-    "main.js": "/random-quotes/static/js/main.4eea5569.js",
+    "main.css": "/random-quotes/static/css/main.008f6c12.css",
+    "main.js": "/random-quotes/static/js/main.e9979048.js",
+    "static/css/867.a348d821.chunk.css": "/random-quotes/static/css/867.a348d821.chunk.css",
+    "static/js/867.4009c434.chunk.js": "/random-quotes/static/js/867.4009c434.chunk.js",
     "static/css/358.16c962c2.chunk.css": "/random-quotes/static/css/358.16c962c2.chunk.css",
     "static/js/358.1ee52aa9.chunk.js": "/random-quotes/static/js/358.1ee52aa9.chunk.js",
     "static/js/787.74473bc7.chunk.js": "/random-quotes/static/js/787.74473bc7.chunk.js",
-    "static/js/297.1e4bb25c.chunk.js": "/random-quotes/static/js/297.1e4bb25c.chunk.js",
+    "static/js/297.c97f5f72.chunk.js": "/random-quotes/static/js/297.c97f5f72.chunk.js",
     "index.html": "/random-quotes/index.html",
-    "main.134ecf8e.css.map": "/random-quotes/static/css/main.134ecf8e.css.map",
-    "main.4eea5569.js.map": "/random-quotes/static/js/main.4eea5569.js.map",
+    "main.008f6c12.css.map": "/random-quotes/static/css/main.008f6c12.css.map",
+    "main.e9979048.js.map": "/random-quotes/static/js/main.e9979048.js.map",
+    "867.a348d821.chunk.css.map": "/random-quotes/static/css/867.a348d821.chunk.css.map",
+    "867.4009c434.chunk.js.map": "/random-quotes/static/js/867.4009c434.chunk.js.map",
     "358.16c962c2.chunk.css.map": "/random-quotes/static/css/358.16c962c2.chunk.css.map",
     "358.1ee52aa9.chunk.js.map": "/random-quotes/static/js/358.1ee52aa9.chunk.js.map",
     "787.74473bc7.chunk.js.map": "/random-quotes/static/js/787.74473bc7.chunk.js.map",
-    "297.1e4bb25c.chunk.js.map": "/random-quotes/static/js/297.1e4bb25c.chunk.js.map"
+    "297.c97f5f72.chunk.js.map": "/random-quotes/static/js/297.c97f5f72.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.134ecf8e.css",
-    "static/js/main.4eea5569.js"
+    "static/css/main.008f6c12.css",
+    "static/js/main.e9979048.js"
   ]
 }
