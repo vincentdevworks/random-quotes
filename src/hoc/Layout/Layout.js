@@ -22,7 +22,6 @@ class Layout extends Component {
     signup: false,
     modal: false,
     fromFav: false,
-    fromSignUp: false,
   };
 
   sidebarToggleHandler = () => {
@@ -35,22 +34,21 @@ class Layout extends Component {
     this.setState({ login: true, modal: true, signup: false });
   };
 
-  signupHandler = (fromFav) => {
-    if (fromFav)
+  signupHandler = (favorites) => {
+    if (favorites) {
       this.setState({
         signup: true,
         modal: true,
         login: false,
         fromFav: true,
-        fromSignUp: true,
       });
-    else
+    } else {
       this.setState({
         signup: true,
         modal: true,
         login: false,
-        fromSignUp: false,
       });
+    }
   };
 
   closeModal = () => {
@@ -69,17 +67,21 @@ class Layout extends Component {
         <Button
           type="auth"
           clickedLogin={this.loginHandler}
-          clickedSignup={this.signupHandler}
+          clickedSignup={() => this.signupHandler(false)}
         />
       </div>
     );
     if (this.props.auth) {
       navigations = (
         <React.Fragment>
-          <Toolbar clicked={this.sidebarToggleHandler} />
+          <Toolbar
+            clicked={this.sidebarToggleHandler}
+            favoritesLength={this.props.favoritesLength}
+          />
           <Sidebar
             show={this.state.sidebar}
             clicked={this.sidebarToggleHandler}
+            favoritesLength={this.props.favoritesLength}
           />
           <SignoutMobile link="/" clicked={this.props.logout} />
         </React.Fragment>
@@ -91,7 +93,7 @@ class Layout extends Component {
         <AuthContext.Provider
           value={{
             clicked: this.signupHandler,
-            fromSignUp: this.state.fromSignUp,
+            fromFav: this.state.fromFav,
           }}
         >
           {this.state.modal && (
@@ -125,5 +127,6 @@ const mapStateToProps = (state) => ({
   tags: state.quotes.tags,
   auth: state.auth.token !== null,
   loading: state.auth.loading,
+  favoritesLength: state.favorites.favorites.length,
 });
 export default connect(mapStateToProps, mapDispatchToProps)(Layout);

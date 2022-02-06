@@ -102,7 +102,8 @@ class Card extends Component {
 
     if (
       this.props.favLoading &&
-      (this.state.count !== 0 || this.context.fromSignUp)
+      this.state.count !== 0 &&
+      (this.context.fromFav || true)
     ) {
       favButton = (
         <div className={classes.Position}>

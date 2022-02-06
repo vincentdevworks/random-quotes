@@ -8,7 +8,7 @@ import Backdrop from "../../components/UI/Backdrop/Backdrop";
 import { connect } from "react-redux";
 import * as actions from "../../store/actions/index";
 import Spinner from "../../components/UI/Spinner/Spinner";
-import {} from "@fortawesome/free-regular-svg-icons";
+import { Navigate } from "react-router-dom";
 
 class Authentication extends Component {
   state = {
@@ -61,21 +61,29 @@ class Authentication extends Component {
     this.setState({ controls });
   };
 
-  onAuth = async (event, email, password, signup, fromSignUp) => {
+  onAuth = async (event, email, password, signup, fromFav) => {
     event.preventDefault();
-    let res = await this.props.auth(email, password, signup);
-    let addFav;
-    if (res.status === 200) {
-      addFav = await this.props.onAdd(
-        this.props.token,
-        this.props.userId,
-        this.props.quoteId,
-        this.props.quote,
-        this.props.author
-      );
-    }
-    if (addFav.status === 200) {
-      this.props.fetchFav(this.props.token, this.props.userId);
+    if (fromFav) {
+      let res = await this.props.auth(email, password, signup);
+      let addFav;
+      if (res.status === 200) {
+        addFav = await this.props.onAdd(
+          this.props.token,
+          this.props.userId,
+          this.props.quoteId,
+          this.props.quote,
+          this.props.author
+        );
+      }
+      if (addFav.status === 200) {
+        this.props.fetchFav(this.props.token, this.props.userId);
+        this.props.closed();
+      }
+    } else {
+      let res = await this.props.auth(email, password, signup);
+      if (res.status === 200) {
+        this.props.closed();
+      }
     }
   };
 
@@ -141,7 +149,7 @@ class Authentication extends Component {
                       this.state.controls.email.value,
                       this.state.controls.password.value,
                       this.props.signup,
-                      true
+                      this.props.fromFav
                     )
                 : (event) => {
                     this.onAuth(
@@ -200,7 +208,7 @@ class Authentication extends Component {
                       this.state.controls.email.value,
                       this.state.controls.password.value,
                       this.props.signup,
-                      true
+                      this.props.fromFav
                     )
                 : (event) => {
                     this.onAuth(
@@ -246,9 +254,9 @@ class Authentication extends Component {
       );
     }
 
-    if (!this.props.loading) {
-      if (this.props.authenticated) this.props.closed();
-    }
+    // if (!this.props.loading) {
+    //   if (this.props.authenticated) this.props.closed();
+    // }
 
     return (
       <React.Fragment>

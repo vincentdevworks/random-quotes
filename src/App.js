@@ -7,6 +7,9 @@ import Card from "./container/Card/Card";
 import { Route, Routes } from "react-router-dom";
 import Share from "./components/Share/Share";
 
+const PageNotFound = lazy(() =>
+  import("./components/PageNotFound/PageNotFound")
+);
 const Favorites = lazy(() => import("./container/Favorites/Favorites"));
 
 class App extends Component {
@@ -36,6 +39,14 @@ class App extends Component {
               }
               exact
             />
+            <Route
+              path="*"
+              element={
+                <Suspense fallback={<p>Loading</p>}>
+                  <PageNotFound />
+                </Suspense>
+              }
+            />
           </React.Fragment>
         ) : (
           <React.Fragment>
@@ -43,6 +54,14 @@ class App extends Component {
               path="/"
               element={[<Card key="card" />, <Share key="share" />]}
               exact
+            />
+            <Route
+              path="*"
+              element={
+                <Suspense fallback={<p>Loading</p>}>
+                  <PageNotFound />
+                </Suspense>
+              }
             />
           </React.Fragment>
         )}

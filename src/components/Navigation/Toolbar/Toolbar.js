@@ -8,7 +8,7 @@ const toolbar = (props) => {
     <div className={classes.Toolbar}>
       <Menu clicked={props.clicked} />
       <div className={classes.Desktop}>
-        <NavigationItems />
+        <NavigationItems favoritesLength={props.favoritesLength} />
       </div>
     </div>
   );

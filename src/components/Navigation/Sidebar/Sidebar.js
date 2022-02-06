@@ -13,7 +13,10 @@ const sidebar = (props) => {
       <div className={classNames.join(" ")}>
         <span onClick={props.clicked}>&#10006;</span>
         <div>
-          <NavigationItems clicked={props.clicked} />
+          <NavigationItems
+            clicked={props.clicked}
+            favoritesLength={props.favoritesLength}
+          />
         </div>
       </div>
     </div>

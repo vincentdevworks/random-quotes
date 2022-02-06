@@ -5,6 +5,11 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSignOutAlt } from "@fortawesome/free-solid-svg-icons";
 
 const navigationItems = (props) => {
+  let colorClass = "";
+  if (props.favoritesLength > 0) {
+    colorClass = classes.Color;
+  }
+
   return (
     <nav>
       <ul className={classes.NavigationItems}>
@@ -12,7 +17,7 @@ const navigationItems = (props) => {
           Quotes
         </NavigationItem>
         <NavigationItem link="/favorites" exact="true" clicked={props.clicked}>
-          Favorites
+          Favorites <sup className={colorClass}>{props.favoritesLength}</sup>
         </NavigationItem>
         <NavigationItem
           link="/"
