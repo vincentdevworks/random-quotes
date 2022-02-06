@@ -8,6 +8,7 @@ import Filter from "../../components/Filter/Filter";
 import { utilFilter } from "../../shared/utility";
 import AuthContext from "../../store/auth-context";
 import Loader from "../../components/UI/Spinner/Loader/Loader";
+import Share from "../../components/Share/Share";
 
 class Card extends Component {
   state = {
@@ -123,6 +124,7 @@ class Card extends Component {
             clicked={() => next(this.props.tags)}
           />
         </div>
+        <Share />
       </div>
     );
   }

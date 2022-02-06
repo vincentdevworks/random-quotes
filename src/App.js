@@ -5,7 +5,6 @@ import * as actions from "./store/actions/index";
 import { connect } from "react-redux";
 import Card from "./container/Card/Card";
 import { Route, Routes } from "react-router-dom";
-import Share from "./components/Share/Share";
 
 const PageNotFound = lazy(() =>
   import("./components/PageNotFound/PageNotFound")
@@ -25,11 +24,7 @@ class App extends Component {
       <Routes>
         {this.props.authenticated ? (
           <React.Fragment>
-            <Route
-              path="/"
-              element={[<Card key="card" />, <Share key="share" />]}
-              exact
-            />
+            <Route path="/" element={<Card key="card" />} exact />
             <Route
               path="/favorites"
               element={
@@ -50,11 +45,7 @@ class App extends Component {
           </React.Fragment>
         ) : (
           <React.Fragment>
-            <Route
-              path="/"
-              element={[<Card key="card" />, <Share key="share" />]}
-              exact
-            />
+            <Route path="/" element={<Card />} exact />
             <Route
               path="*"
               element={
